@@ -8,46 +8,53 @@ import {useRef, useState} from 'react';
 import {Float, useGLTF, useTexture} from '@react-three/drei';
 
 const Cube = ({...props}) => {
-    const {nodes} = useGLTF('models/cube.glb');
-
-    const texture = useTexture('textures/cube.png');
+    const {scene} = useGLTF('models/rubiks_cube.glb');
 
     const cubeRef = useRef();
     const [hovered, setHovered] = useState(false);
 
     useGSAP(() => {
-        gsap
-            .timeline({
-                repeat: -1,
-                repeatDelay: 0.5,
-            })
-            .to(cubeRef.current.rotation, {
-                y: hovered ? '+=2' : `+=${Math.PI * 2}`,
-                x: hovered ? '+=2' : `-=${Math.PI * 2}`,
-                duration: 2.5,
-                stagger: {
-                    each: 0.15,
-                },
-            });
+
+        const tl = gsap.timeline({
+            repeat: -1,
+            repeatDelay: 0.6
+        });
+
+        tl.to(cubeRef.current.rotation, {
+            y: "+=" + Math.PI / 2,
+            duration: 0.5
+        });
+
+        tl.to(cubeRef.current.rotation, {
+            x: "+=" + Math.PI / 2,
+            duration: 0.5
+        });
+
+        tl.to(cubeRef.current.rotation, {
+            z: "+=" + Math.PI / 2,
+            duration: 0.5
+        });
+
     });
 
     return (
         <Float floatIntensity={2}>
-            <group position={[9, -4, 0]} rotation={[2.6, 0.8, -1.8]} scale={0.74} dispose={null} {...props}>
-                <mesh
-                    ref={cubeRef}
-                    castShadow
-                    receiveShadow
-                    geometry={nodes.Cube.geometry}
-                    material={nodes.Cube.material}
-                    onPointerEnter={() => setHovered(true)}>
-                    <meshMatcapMaterial matcap={texture} toneMapped={false}/>
-                </mesh>
+            <group
+                ref={cubeRef}
+                position={[9, -4, 0]}
+                rotation={[2.6, 0.8, -1.8]}
+                scale={10}
+                dispose={null}
+                {...props}
+                onPointerEnter={() => setHovered(true)}
+                onPointerLeave={() => setHovered(false)}
+            >
+                <primitive object={scene}/>
             </group>
         </Float>
     );
 };
 
-useGLTF.preload('models/cube.glb');
+useGLTF.preload('models/rubiks_cube.glb');
 
 export default Cube;
