@@ -60,13 +60,9 @@ const Hero = () => {
                 </Canvas>
             </div>
 
-            <div className={"absolute bottom-7 left-0 right-0 w-full z-10 flex justify-center"}>
-                <a href="#contact" className={"w-full max-w-[950px] px-5 sm:px-10"}>
-                    <Button
-                        name={"Let's work together"}
-                        isBeam
-                        containerClass="w-full"
-                    />
+            <div className="absolute bottom-7 left-0 right-0 w-full z-10 c-space">
+                <a href="#about" className="w-fit">
+                    <Button name="Let's work together" isBeam containerClass="sm:w-fit w-full sm:min-w-96"/>
                 </a>
             </div>
         </section>
