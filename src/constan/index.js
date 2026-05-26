@@ -58,6 +58,45 @@ export const clientReviews = [
 
 export const myProjects = [
     {
+        title: 'MacBook Pro Landing Page',
+        desc: 'A modern, interactive MacBook product landing page inspired by Apple-style design. It showcases smooth animations, 3D visuals, responsive sections, and polished product presentation for a premium user experience.',
+        subdesc:
+            'Built with React.js, GSAP, Three.js, Tailwind CSS, Vite, and Zustand, this project focuses on scroll-based animations, 3D model interaction, clean UI structure, and high-quality frontend visual effects.',
+        href: 'https://jason-macbook-landing.vercel.app/',
+        texture: '/textures/project/project0.mkv',
+        logo: '/assets/project-logo0.svg',
+        logoStyle: {
+            backgroundColor: '#1f1f1f',
+            background:
+                'linear-gradient(0deg, #1F1F1F50, #1F1F1F50), linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(208, 213, 221, 0.8) 100%)',
+            border: '0.2px solid rgba(208, 213, 221, 1)',
+            boxShadow: '0px 0px 60px 0px rgba(120, 120, 120, 0.3)',
+        },
+        spotlight: '/assets/spotlight3.png',
+        tags: [
+            {
+                id: 1,
+                name: 'React.js',
+                path: '/assets/react.svg',
+            },
+            {
+                id: 2,
+                name: 'TailwindCSS',
+                path: 'assets/tailwindcss.png',
+            },
+            {
+                id: 3,
+                name: 'GSAP',
+                path: '/assets/gsap.svg',
+            },
+            {
+                id: 4,
+                name: 'Three.js',
+                path: '/assets/threejs.png',
+            },
+        ],
+    },
+    {
         title: 'CarePulse - Health Management System',
         desc: 'An innovative healthcare platform designed to streamline essential medical processes. It simplifies patient registration, appointment scheduling, and medical record management, providing a seamless experience for both healthcare providers and patients.',
         subdesc:
