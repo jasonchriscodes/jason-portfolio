@@ -136,6 +136,43 @@ export const myProjects = [
         ],
     },
     {
+        title: 'DevPost - Full-Stack Article Publishing Platform',
+        desc: 'DevPost is a full-stack article publishing platform where users can create, browse, and manage posts through a clean and responsive web interface. The app includes protected pages, user authentication, profile access, and detailed article views.',
+        subdesc:
+            'Built with React, Vite, TailwindCSS, Django REST Framework, and JWT authentication, DevPost connects a modern frontend with a Python backend API to deliver a smooth blogging and content-sharing experience.',
+        href: 'https://devpost-front.onrender.com/',
+        texture: '/textures/project/project6.mp4',
+        logo: '/assets/project-logo6.png',
+        logoStyle: {
+            backgroundColor: '#13202F',
+            border: '0.2px solid #17293E',
+            boxShadow: '0px 0px 60px 0px #2F6DB54D',
+        },
+        spotlight: '/assets/spotlight2.png',
+        tags: [
+            {
+                id: 1,
+                name: 'React.js',
+                path: '/assets/react.svg',
+            },
+            {
+                id: 2,
+                name: 'TailwindCSS',
+                path: '/assets/tailwindcss.png',
+            },
+            {
+                id: 3,
+                name: 'Django',
+                path: '/assets/django.png',
+            },
+            {
+                id: 4,
+                name: 'Python',
+                path: '/assets/python.png',
+            },
+        ],
+    },
+    {
         title: 'LiveDoc - Real-Time Google Docs Clone',
         desc: 'LiveDoc is a powerful collaborative app that elevates the capabilities of real-time document editing. As an enhanced version of Google Docs, It supports millions of collaborators simultaneously, ensuring that every change is captured instantly and accurately.',
         subdesc:
